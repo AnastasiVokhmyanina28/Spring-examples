@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Sping-examples" />
+        <module name="Spring-examples" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Sping-examples" target="11" />
+      <module name="Spring-examples" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
