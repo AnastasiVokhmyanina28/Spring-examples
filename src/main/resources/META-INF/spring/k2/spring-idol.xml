@@ -40,6 +40,31 @@
     <bean id="piano"
           class="org.example.K2.Piano" />
 
+    <bean id="hank"
+          class="org.example.K2.OneMainBand">
+        <property name="instruments">
+            <props>
+                <prop key="GUITAR">STRUM STRUM STRUM</prop>
+                <prop key="CYMBAL">CRASH CRASH CRASH</prop>
+                <prop key="HARMONICA">HUM HUM HUM</prop>
+            </props>
+            
+        </property>
+    </bean>
+
+    <bean id="carl" class="org.example.K2.Instrumentalist">
+        <property name="song" value="#{kenny.song}" />
+    </bean>
+
+    <bean id="stan"
+          class="org.example.K2.Instrumentalist">
+        <property name="song" value="#{systemProperties.STANS_SONG}" />
+    </bean>
+
+    <bean id="ricky"
+          class="com.springinaction.springidol.Instrumentalist">
+        <property name="song" value="#{magicSongBook.pickASong()}" />
+    </bean>
 
 
 </beans>
