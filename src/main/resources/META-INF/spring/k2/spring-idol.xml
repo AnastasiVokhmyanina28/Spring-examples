@@ -23,9 +23,6 @@
           factory-method="getInstance"/>
 
 
-    <bean id="ticket"
-          class="org.example.K2.Ticket" scope="prototype"/>
-
     <bean id="kenny"
           class="org.example.K2.Instrumentalist">
         <property name="song" value="Jingle Bells"/>
@@ -44,8 +41,8 @@
           class="org.example.K2.OneMainBand">
         <property name="instruments">
             <map>
-                <entry key="CYMBAL" value-ref="piano"/>
-                <entry key="HARMONICA" value-ref="saxophone"/>
+                <entry key="PIANO" value-ref="piano"/>
+                <entry key="SAXOPHONE" value-ref="saxophone"/>
             </map>
         </property>
     </bean>
@@ -59,8 +56,4 @@
           class="org.example.K2.Instrumentalist">
         <property name="song" value="happy" />
     </bean>
-
-
-
-
 </beans>

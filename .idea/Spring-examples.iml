@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Spring Idol3" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/META-INF/spring/k3/ spring-idol3.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/META-INF/spring/k3/spring-idol3.xml</file>
+        </fileset>
+        <fileset id="fileset2" name="Spring Idol" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/META-INF/spring/k2/spring-idol.xml</file>
+        </fileset>
+        <fileset id="fileset3" name="Spingidol Context 2" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/META-INF/spring/k2/spingidol-context-2.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
+  </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_11">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />

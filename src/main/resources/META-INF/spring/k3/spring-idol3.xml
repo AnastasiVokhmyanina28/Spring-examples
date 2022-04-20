@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="duke" class="org.example.K2.PoeticJuggler">
+        <constructor-arg value="15"/>
+        <constructor-arg>
+            <bean class="org.example.K2.Sonnet29"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="sonnet29" class="org.example.K2.Sonnet29"/>
+
+    <bean id="theStage" class="org.example.K2.Stage" factory-method="getInstance"/>
+
+    <bean id="kenny" parent="baseSaxophonist"/>
+
+    <bean id="hank" class="org.example.K2.OneMainBand">
+        <property name="instruments">
+            <map>
+                <entry key="PIANO" value-ref="piano"/>
+                <entry key="SAXOPHONE" value="#{saxophone}"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="piano"
+          class="org.example.K2.Piano" />
+
+    <bean id="david" parent="baseSaxophonist"/>
+
+    <bean id="carl" class="org.example.K2.Instrumentalist">
+        <property name="song" value="#{kenny.song}"/>
+    </bean>
+
+    <bean id="saxophone"
+          class="org.example.K2.Saxophone"  scope="prototype"/>
+
+    <bean id="guitar"
+          class="org.example.K2.Saxophone" />
+
+
+    <bean id="frank" parent="baseSaxophonist">
+        <property name="song" value="Mary had a little lamb" />
+    </bean>
+
+    <bean id="stevie" class="org.example.K3.Instrumentalist">
+    <lookup-method name="getInstrument" bean="saxophone"/>
+    <property name="song" value="Greensleeves"/>
+    </bean>
+
+    <bean id="basePerformer" abstract="true">
+        <property name="song" value="Somewhere Over the Rainbow" />
+    </bean>
+
+    <bean id="pianist" class="org.example.K2.Instrumentalist" abstract="true">
+        <property name="song" value="Chopsticks"/>
+        <property name="instrument">
+            <bean class="org.example.K2.Piano"/>
+        </property>
+    </bean>
+
+    <bean id="baseSaxophonist"
+          class="org.example.K2.Instrumentalist"
+          abstract="true">
+        <property name="instrument" ref="saxophone"/>
+        <property name="song" value="Jingle Bells"/>
+    </bean>
+
+    <bean id="taylor" parent="basePerformer"
+          class="org.example.K2.Instrumentalist">
+        <property name="instrument" ref="saxophone" />
+    </bean>
+
+    <bean id="magicBox"
+          class="org.example.K3.MagicBoxImpl" >
+    <replaced-method
+        name="getContents" replacer="tigerReplacer"/>
+    </bean>
+
+    <bean id="tigerReplacer"
+          class="org.example.K3.TigerReplacer" />
+
+    <bean id="harry"
+          class="org.example.K3.Magician">
+        <property name="magicBox" ref="magicBox" />
+        <property name="magicWords" value="Bippity boppity boo" />
+    </bean>
+</beans>
