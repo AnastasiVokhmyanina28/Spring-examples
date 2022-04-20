@@ -1,6 +1,8 @@
 package org.example.K2;
 
 public class Instrumentalist implements Performer{
+    private String song;
+    private Instrument instrument;
     public Instrumentalist(){}
 
     @Override
@@ -9,7 +11,6 @@ public class Instrumentalist implements Performer{
         instrument.play();
     }
 
-    private String song;
     public void setSong(String song) {
         this.song = song;
     }
@@ -22,7 +23,7 @@ public class Instrumentalist implements Performer{
         return song;
     }
 
-    private Instrument instrument;
+
 
     public void setInstrument(Instrument instrument){
         this.instrument = instrument;
