@@ -13,6 +13,9 @@
         <fileset id="fileset3" name="Spingidol Context 2" removed="false">
           <file>file://$MODULE_DIR$/src/main/resources/META-INF/spring/k2/spingidol-context-2.xml</file>
         </fileset>
+        <fileset id="fileset4" name="Spring4" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/META-INF/spring/k4/spring4.xml</file>
+        </fileset>
       </configuration>
     </facet>
   </component>
