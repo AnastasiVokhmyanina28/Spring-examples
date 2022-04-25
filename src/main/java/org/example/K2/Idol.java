@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-
 public class Idol {
     public static void main(String[] args) throws PerformanceException {
         ApplicationContext ctx = new ClassPathXmlApplicationContext(

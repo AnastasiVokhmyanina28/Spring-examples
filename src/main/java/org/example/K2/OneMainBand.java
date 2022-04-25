@@ -3,8 +3,9 @@ package org.example.K2;
 import java.util.Collection;
 import java.util.Map;
 
-public class OneMainBand implements Performer{
-    public OneMainBand(){}
+public class OneMainBand implements Performer {
+    public OneMainBand() {
+    }
 
     @Override
     public void perform() throws PerformanceException {
@@ -15,9 +16,9 @@ public class OneMainBand implements Performer{
         }
     }
 
-        private Map<String,Instrument> instruments;
+    private Map<String, Instrument> instruments;
 
-    public void setInstruments(Map<String,Instrument> instruments) {
+    public void setInstruments(Map<String, Instrument> instruments) {
         this.instruments = instruments;
     }
 }

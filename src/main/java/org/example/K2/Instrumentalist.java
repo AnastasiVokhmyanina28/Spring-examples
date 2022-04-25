@@ -1,8 +1,13 @@
 package org.example.K2;
 
+import org.springframework.beans.factory.annotation.Configurable;
+
+@Configurable("pianist")
 public class Instrumentalist implements Performer{
+
     private String song;
     private Instrument instrument;
+
     public Instrumentalist(){}
 
     @Override
@@ -22,8 +27,6 @@ public class Instrumentalist implements Performer{
     public String screamSong(){
         return song;
     }
-
-
 
     public void setInstrument(Instrument instrument){
         this.instrument = instrument;
