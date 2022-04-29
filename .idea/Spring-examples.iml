@@ -16,6 +16,13 @@
         <fileset id="fileset4" name="Spring4" removed="false">
           <file>file://$MODULE_DIR$/src/main/resources/META-INF/spring/k4/spring4.xml</file>
         </fileset>
+        <fileset id="fileset5" name="Knights Aop" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/META-INF/spring/k1/knights-aop.xml</file>
+          <file>file://$MODULE_DIR$/src/main/classes/META-INF/spring/k1/knights-aop.xml</file>
+        </fileset>
+        <fileset id="fileset6" name="Zadanie" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/META-INF/spring/zadanie/zadanie.xml</file>
+        </fileset>
       </configuration>
     </facet>
   </component>
